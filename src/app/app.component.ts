@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+ items:Array<string>=["item 1","item 2","item 3"];
+ today:any = new Date();
+ userName:string="User name"
 }
