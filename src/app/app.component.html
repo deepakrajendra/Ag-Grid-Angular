@@ -98,7 +98,7 @@
       <div class="content-container">
           <p class="heading">Grid with Single Line</p>
  <div class="main-grid-container">
-   <div class="filters-container" fxLayout="row">
+   <!-- <div class="filters-container" fxLayout="row">
       <div class="drop-down" fxFlex="10">
           <mat-form-field>
               <mat-select placeholder="Department">
@@ -108,7 +108,7 @@
               </mat-select>
              </mat-form-field>
        </div>
-   </div>
+   </div> -->
    <div class="filter-chips-container" fxLayout="row" fxLayoutAlign="space-between">
       <mat-chip-list>
           <mat-chip removable="true">Marketing
@@ -121,10 +121,10 @@
                 <mat-icon matChipRemove>cancel</mat-icon>
               </mat-chip>
          </mat-chip-list>
-    <small>Total 345</small>
+    <small style="margin-top: 5px;">Total 345</small>
    </div>
 
-<div class="review-grid-actions" fxLayout="row" fxLayoutAlign="space-between">
+<!-- <div class="review-grid-actions" fxLayout="row" fxLayoutAlign="space-between">
   <div fxFlex="70">
     <button mat-raised-button color="primary">Approve</button>
     <button mat-raised-button>Nudge</button>
@@ -137,12 +137,34 @@
     <mat-icon>map</mat-icon>
       <mat-icon>map</mat-icon>
   </div>
+</div> -->
+
+<!-- grid -->
+<div>
+  <ag-grid-angular style="width: 100%; height:500px" class="ag-theme-material"
+                 [gridOptions]="gridOptions"
+                 [columnDefs]="columnDefs"
+                 [rowData]="rowData"
+
+                 [icons]="icons"
+                 enableColResize
+                 enableSorting
+                 enableFilter
+                 suppressRowClickSelection
+                 [rowSelection]="multiple"
+
+                 (gridReady)="onReady($event)">
+</ag-grid-angular>
 </div>
 
+
  </div>      
- 
- 
       </div>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
+
+
+<!-- groupHeaders
+                 toolPanelSuppressGroups
+                 toolPanelSuppressValues -->

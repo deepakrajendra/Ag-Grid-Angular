@@ -1,8 +1,9 @@
 import { AgGridModule } from 'ag-grid-angular';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
-
 import { MaterialModule } from './material.module';
+
+import { DateRendererComponent } from '../../date-renderer/date-renderer.component';
 
 
 @NgModule(
@@ -10,7 +11,7 @@ import { MaterialModule } from './material.module';
         imports: [
             MaterialModule,
             FlexLayoutModule,
-            AgGridModule.withComponents([])
+            AgGridModule.withComponents([DateRendererComponent])
         ],
         exports: [
             MaterialModule,
