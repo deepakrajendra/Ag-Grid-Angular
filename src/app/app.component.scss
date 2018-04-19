@@ -4,7 +4,7 @@
     left: 0;
     right:0;
     height:50px;
-    background-color:#3897E4;
+    // background-color:#3897E4;
 
     .logo-container {
         height: 50px;
@@ -28,6 +28,18 @@
                 font-size: 16px;
             }
         }
+    }
+
+    .nav-search{
+        height:30px;
+        width:169px;
+        border-radius:4px;
+        background-color:rgba(0,0,0,0.2);
+        border : 1px solid rgba(243,243,243,0.5);
+        color:white;
+        padding: 4px 0 4px 10px;
+        font-size: 13px;
+        transition : border .5s ease-in-out, background .3s ease-in-out;
     }
 
 }

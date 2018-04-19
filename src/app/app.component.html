@@ -1,31 +1,25 @@
-<mat-toolbar class="header clear-left-padding">
+<mat-toolbar class="header clear-left-padding" color="primary">
   <div class="logo-container">
     <img src="../assets/images/logo.png" class="logo" alt="keka logo">
   </div>
   <div class="nav-container" fxLayout="row" fxLayoutAlign="space-between">
-    <div class="org-name" fxFlex="60">
+    <div class="org-name" fxFlex="55">
       <a href="#">Keka Technologies Private Limited.</a>   
     </div>
-    <!-- <div class="nav-options" fxFlex="40" fxLayout="row" fxLayoutAlign="space-between" >
-        <form novalidate fxFlex="50" style="margin-left:20px">
-            <input type="text" placeholder="Search">
+    <div class="nav-options" fxFlex="45" fxLayout="row" fxLayoutAlign="space-between" >
+        <form novalidate fxFlex="50" style="margin-left:20px" class="text-white">
+            <input type="text" placeholder="Search" class="nav-search">
           </form>
     <div fxFlex="50" fxLayout="row" fxLayoutAlign="space-between">
         <div class="font-size-md text-white">
             {{today|date}}
          </div>
+         <mat-icon style="color:white">wb_sunny</mat-icon>
          <div class="font-size-md text-white">
             {{userName}}
          </div>
-         <div class="font-size-md text-white">
-            {{userName}}
-         </div>
-         <div class="font-size-md text-white">
-            {{userName}}
-         </div>
-         <mat-icon>map</mat-icon>
     </div>
-    </div> -->
+    </div>
   </div>
 
 </mat-toolbar>
@@ -124,17 +118,17 @@
    </div>
 
 <div class="review-grid-actions" fxLayout="row" fxLayoutAlign="space-between">
-  <div fxFlex="75">
-    <button mat-raised-button class="btn-primary">Approve</button>
-    <button mat-raised-button class="btn-primary">Nudge</button>
-    <button mat-raised-button class="btn-cancel">Cancel Review</button>
+  <div fxFlex="77">
+    <button mat-raised-button color="primary" >Approve</button>
+    <button mat-raised-button color="primary">Nudge</button>
+    <button mat-raised-button color="accent" style="color:white">Cancel Review</button>
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-between" fxFlex="15"  >
+  <div fxLayout="row" fxLayoutAlign="space-between" fxFlex="23"  >
     <mat-form-field>
       <input matInput placeholder="Search">
     </mat-form-field>
-    <mat-icon>map</mat-icon>
-      <mat-icon>map</mat-icon>
+    <mat-icon style="margin-top:10px; color:lightgrey">map</mat-icon>
+      <mat-icon style="margin-top:10px; color:lightgrey">map</mat-icon>
   </div>
 </div>
 
