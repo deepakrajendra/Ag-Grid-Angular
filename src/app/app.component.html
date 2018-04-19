@@ -4,8 +4,7 @@
   </div>
   <div class="nav-container" fxLayout="row" fxLayoutAlign="space-between">
     <div class="org-name" fxFlex="60">
-      <a href="#">Keka Technologies Private Limited.</a> 
-
+      <a href="#">Keka Technologies Private Limited.</a>   
     </div>
     <!-- <div class="nav-options" fxFlex="40" fxLayout="row" fxLayoutAlign="space-between" >
         <form novalidate fxFlex="50" style="margin-left:20px">
@@ -124,11 +123,11 @@
     <small style="margin-top: 5px;">Total 345</small>
    </div>
 
-<!-- <div class="review-grid-actions" fxLayout="row" fxLayoutAlign="space-between">
+<div class="review-grid-actions" fxLayout="row" fxLayoutAlign="space-between">
   <div fxFlex="70">
-    <button mat-raised-button color="primary">Approve</button>
-    <button mat-raised-button>Nudge</button>
-    <button mat-raised-button>Cancel Review</button>
+    <button mat-raised-button class="btn-primary">Approve</button>
+    <button mat-raised-button class="btn-primary">Nudge</button>
+    <button mat-raised-button class="btn-cancel">Cancel Review</button>
   </div>
   <div fxLayout="row" fxLayoutAlign="space-between" fxFlex="30"  >
     <mat-form-field>
@@ -137,22 +136,23 @@
     <mat-icon>map</mat-icon>
       <mat-icon>map</mat-icon>
   </div>
-</div> -->
+</div>
 
 <!-- grid -->
 <div>
-  <ag-grid-angular style="width: 100%; height:500px" class="ag-theme-material"
+  <ag-grid-angular style="width: 100%" class="ag-theme-material"
+  [domLayout]="'autoHeight'"
                  [gridOptions]="gridOptions"
                  [columnDefs]="columnDefs"
                  [rowData]="rowData"
-
+                 paginationPageSize="3"
                  [icons]="icons"
                  enableColResize
                  enableSorting
                  enableFilter
                  suppressRowClickSelection
                  [rowSelection]="multiple"
-
+                 [pagination]="true"
                  (gridReady)="onReady($event)">
 </ag-grid-angular>
 </div>
@@ -168,3 +168,5 @@
 <!-- groupHeaders
                  toolPanelSuppressGroups
                  toolPanelSuppressValues -->
+                 <!-- [defaultColDef]="defaultColDef" -->
+                 

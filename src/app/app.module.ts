@@ -6,12 +6,14 @@ import { SharedModule } from './shared/modules/shared.module';
 import { AppComponent } from './app.component';
 import { ReviewService } from './review.service';
 import { DateRendererComponent } from './date-renderer/date-renderer.component';
+import { ActionsRendererComponent } from './actions-renderer/actions-renderer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DateRendererComponent
+    DateRendererComponent,
+    ActionsRendererComponent
   ],
   imports: [
     BrowserModule,

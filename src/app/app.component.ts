@@ -5,6 +5,7 @@ import { RefData } from './shared/models/ref-data';
 import { Review } from './shared/models/review.model';
 import { ReviewService } from './review.service';
 import { DateRendererComponent } from './date-renderer/date-renderer.component';
+import { ActionsRendererComponent } from './actions-renderer/actions-renderer.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ export class AppComponent {
   //  private icons: any;
   public rowData: any[];
   public columnDefs: any[];
+  public defaultColDef:any;
   //  public rowCount: string;
 
   private api: GridApi;
@@ -45,8 +47,29 @@ export class AppComponent {
     this.api = params.api;
     this.columnApi = params.columnApi;
     this.gridOptions.api.sizeColumnsToFit();
+    this.gridOptions.headerHeight=40;
+    // this.gridOptions.groupHeaderHeight=40;
+    // this.gridOptions.floatingFiltersHeight=40;
+    this.defaultColDef=
+      {
+      width: 100,
+      headerComponentParams : {
+      template:
+          '<div class="ag-cell-label-container" role="presentation">' +
+          '  <span ref="eMenu" class="ag-header-icon ag-header-cell-menu-button"></span>' +
+          '  <div ref="eLabel" class="ag-header-cell-label" role="presentation">' +
+          '    <span ref="eSortOrder" class="ag-header-icon ag-sort-order" ></span>' +
+          '    <span ref="eSortAsc" class="ag-header-icon ag-sort-ascending-icon" ></span>' +
+          '    <span ref="eSortDesc" class="ag-header-icon ag-sort-descending-icon" ></span>' +
+          '    <span ref="eSortNone" class="ag-header-icon ag-sort-none-icon" ></span>' +
+          '    ** <span ref="eText" class="ag-header-cell-text" role="columnheader"></span>' +
+          '    <span ref="eFilter" class="ag-header-icon ag-filter-icon"></span>' +
+          '  </div>' +
+          '</div>'
+      }
     // this.gridOptions.angularCompileHeaders=true;
   }
+}
 
   private createRowData() {
     const rowData = this.reviews;
@@ -161,31 +184,39 @@ export class AppComponent {
         headerCheckboxSelection: true,
         checkboxSelection:true,
           filter:"agTextColumnFilter",
-          height:48
+          suppressFilter: true
       },
       {
         headerName: 'SELECTION DUE ON',
         field: 'selectionDueOn',
-        cellRendererFramework: DateRendererComponent
+        cellRendererFramework: DateRendererComponent,
+        suppressFilter: true
       },
-      // {
-      //   headerName: 'REVIEWERS NOMINATED',
-      //   field: 'reviewersNominated',
-      //   valueFormatter: this.concatReviewers,
-      //   filter: "agTextColumnFilter"
-      // },
+      {
+        headerName: 'REVIEWERS NOMINATED',
+        field: 'reviewersNominated',
+        valueFormatter: this.concatReviewers,
+        filter: "agTextColumnFilter"
+      },
       {
         headerName: 'STATUS',
-        field: 'status'
+        field: 'status',
+        suppressFilter: true
+        
       },
       {
         headerName: 'WAITING ON',
-        field: 'waitingOn'
+        field: 'waitingOn',
+        suppressFilter: true
+      },
+      {
+        headerName:'ACTIONS',
+        suppressFilter: true,
+        suppressSorting:true,
+        cellRendererFramework:ActionsRendererComponent
       }
 
     ];
-
-
     return columnDefs;
   }
 
@@ -194,11 +225,11 @@ export class AppComponent {
   concatReviewers(params: any) {
     var reviewers = "";
     if (params.value.length < 3) {
-      return params.value.join(',');
+      return params.value.join(', ');
     }
     else {
-reviewers = params.value[0]+','+params.value[1]+' +'+ (params.value.length-2)+' others';
-return reviewers;
+      reviewers = params.value[0] + ',' + params.value[1] + ' +' + (params.value.length - 2) + ' others';
+      return reviewers;
     }
   }
 

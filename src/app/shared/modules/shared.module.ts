@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from './material.module';
 
 import { DateRendererComponent } from '../../date-renderer/date-renderer.component';
+import { ActionsRendererComponent } from '../../actions-renderer/actions-renderer.component';
 
 
 @NgModule(
@@ -11,7 +12,7 @@ import { DateRendererComponent } from '../../date-renderer/date-renderer.compone
         imports: [
             MaterialModule,
             FlexLayoutModule,
-            AgGridModule.withComponents([DateRendererComponent])
+            AgGridModule.withComponents([DateRendererComponent,ActionsRendererComponent])
         ],
         exports: [
             MaterialModule,
