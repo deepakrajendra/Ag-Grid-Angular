@@ -40,6 +40,10 @@
         padding: 4px 0 4px 10px;
         font-size: 13px;
         transition : border .5s ease-in-out, background .3s ease-in-out;
+        
+    }
+    ::placeholder {
+        color: white;
     }
 
 }
@@ -136,6 +140,12 @@ li.active{
     .filters-container{
         border:1px solid #E3E5E8;
         background-color:white;
+        .dropdown{
+            padding:15px;
+            border-color:transparent;
+            border-right-color:#A4AAB2;
+            color:#A4AAB2;
+        }
     }
     .filter-chips-container{
         margin: 5px 0 5px 0;

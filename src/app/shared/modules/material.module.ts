@@ -7,7 +7,8 @@ import {
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatChipsModule
+    MatChipsModule,
+    MatMenuModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -21,7 +22,8 @@ import { NgModule } from '@angular/core';
         MatSelectModule,
         MatFormFieldModule,
         MatInputModule,
-        MatChipsModule
+        MatChipsModule,
+        MatMenuModule
     ],
     exports: [
         MatButtonModule,
@@ -32,7 +34,8 @@ import { NgModule } from '@angular/core';
         MatSelectModule,
         MatFormFieldModule,
         MatInputModule,
-        MatChipsModule
+        MatChipsModule,
+        MatMenuModule
     ],
 })
 
