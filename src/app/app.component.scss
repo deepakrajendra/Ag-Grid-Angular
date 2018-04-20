@@ -13,34 +13,50 @@
     }
 
     .logo{
-        margin-top: 12px;
-        margin-left: 25px;
-        height:20px;
+        margin-top: 11px;
+        margin-left: 21px;
+        height:23px;
     }
     
     .nav-container{
         width:100%;
         margin-left:12px;
         .org-name{
+            padding-bottom:5px;
             a{
                 text-decoration: none;
                 color:white;
                 font-size: 16px;
+                margin-top: 5px;
+                display: inline-block;
+                margin-right:5px;
             }
+        }
+        .nav-icon{
+            color:white;
+            margin-top:12px;
+             font-size:16px;
+        }
+
+        .profile-picture{
+            height:30px;
+            width:30px;
+            border-radius:50%;
+            margin-top:10px;
         }
     }
 
     .nav-search{
-        height:30px;
-        width:169px;
+        height:29px;
+        width:214px;
         border-radius:4px;
         background-color:rgba(0,0,0,0.2);
         border : 1px solid rgba(243,243,243,0.5);
-        color:white;
+        color:rgba(243,243,243,0.5);
         padding: 4px 0 4px 10px;
         font-size: 13px;
         transition : border .5s ease-in-out, background .3s ease-in-out;
-        
+        margin-top:5px;
     }
     ::placeholder {
         color: white;
@@ -59,7 +75,7 @@
     .side-navigation-icon{
         font-size:30px;
         margin-left:25px;
-        color:grey;
+        color:#A6B1BC;
     }
   }
 
@@ -71,16 +87,23 @@
     // bottom: 0;
     // left: 0;
     // right: 0;
+    .main-content{
+        margin-left:92px;
+    }
   }
 
   .side-navigation-list{
       width:100%;
   .side-navigation-item{
     // padding-left: 15px;
-    color:grey;
-    margin-top:25px;
-    padding: 0 10px 0 10px;
+    color:#A6B1BC;
+    // margin-top:37px;
+    padding: 20px 10px 20px 10px;
     // text-align: center;  
+}
+
+:hover{
+    background-color:#424955;
 }
     }
 
@@ -134,6 +157,10 @@ li.active{
     // ::ng-deep .mat-input-underline {
     //     display: none;
     // }
+    
+    // ::ng-deep .mat-form-field-infix {
+    //     width: 30px;
+    // }
     .main-grid-container{
       border: 1px solid #E3E5E8;
 
@@ -142,6 +169,7 @@ li.active{
         background-color:white;
         .dropdown{
             padding:15px;
+            // padding-right:20px;
             border-color:transparent;
             border-right-color:#A4AAB2;
             color:#A4AAB2;
@@ -149,17 +177,48 @@ li.active{
     }
     .filter-chips-container{
         margin: 5px 0 5px 0;
-      padding:10px;
+      padding: 10px 20px 10px 20px;
         
     }
     .review-grid-actions{
         padding: 20px 20px 0 20px;
         background-color:white;
+    .grid-actions-icon{
+        margin-top:10px;
+         color:lightgrey;
+    }
     }
     .drop-down{
         // border: 1px solid grey;
     }
 }
+
+.page-size-select{
+    margin-top:7px;
+    ::ng-deep .mat-input-underline {
+        display: none;
+    }
+    
+    ::ng-deep .mat-form-field-infix {
+        width: 30px;
+    }
+
+    ::ng-deep .mat-select-value-text {
+        color: #A4AAB2;
+    }
+}
+
+.server-filter-select{
+    border-right : 1px solid #A4AAB2;
+    ::ng-deep .mat-input-underline {
+        display: none;
+    }
+    
+    ::ng-deep .mat-form-field-infix {
+        width: 130px;
+        padding:5px 10px 0px 20px;
+    }
+}  
     
   }
   
@@ -218,3 +277,6 @@ font-size:12px;
 .display-block{
     display:block;
 }
+
+
+//material

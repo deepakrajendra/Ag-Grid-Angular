@@ -17,7 +17,8 @@ export class AppComponent {
   items: Array<string> = ["item 1", "item 2", "item 3"];
   today: any = new Date();
   userName: string = "User name"
-
+//drop down
+selected ="1";
   
   //grid
   private reviews: Array<Review>;
@@ -30,7 +31,7 @@ export class AppComponent {
 
   private api: GridApi;
   private columnApi: ColumnApi;
-
+  private pageSize = 2;
 
   constructor(private reviewService: ReviewService) {
 

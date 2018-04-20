@@ -18,6 +18,13 @@ body{
 
 .ag-theme-material .ag-cell {
     border-right: 1px solid #e0e0e0 ;
+    padding-left:16px;
+    padding-right:16px;
+}
+
+
+.ag-theme-material .ag-cell-focus {
+    border:1px solid #3D9EED;  
 }
 
 .ag-header-cell {
@@ -31,6 +38,8 @@ background-color: #F4F5F8;
 
 .ag-theme-material .ag-header-cell, .ag-theme-material .ag-header-group-cell {
     line-height: 40px;
+    padding-left:16px;
+    padding-right:16px;
 }
 
 .ag-theme-material .ag-header-cell-label .ag-header-cell-text {
@@ -38,4 +47,16 @@ background-color: #F4F5F8;
 }
 .ag-theme-material .ag-header-select-all span {
     height: 76%;
-}
+    }
+
+    .ag-icon ag-icon-desc{
+        height:37px;
+    }
+
+    .ag-theme-material .ag-header-cell-label .ag-header-icon span {
+     height: 10px;
+    }
+    //angular material override
+    mat-nav-list a {
+        cursor: pointer;
+    }
