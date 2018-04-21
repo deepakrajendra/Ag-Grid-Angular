@@ -60,3 +60,19 @@ background-color: #F4F5F8;
     mat-nav-list a {
         cursor: pointer;
     }
+
+
+//server filter
+
+.server-filter-select{
+    border-right : 1px solid #A4AAB2;
+    // ::ng-deep 
+    .mat-input-underline {
+        display: none;
+    }
+    // ::ng-deep 
+    .mat-form-field-infix {
+        width: 130px;
+        padding:5px 10px 0px 20px;
+    }
+}    

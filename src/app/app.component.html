@@ -1,16 +1,16 @@
 <div class="main-container">
-  <mat-toolbar class="header clear-left-padding" color="primary" style="height:50px;">
+  <mat-toolbar class="header clear-left-padding" color="primary">
     <div class="logo-container">
       <a href="#">
         <img src="../assets/images/logo.png" class="logo" alt="keka logo">
       </a>
     </div>
     <div class="nav-container" fxLayout="row" fxLayoutAlign="space-between center">
-      <div class="org-name" fxFlex="55">
+      <div class="org-name" fxFlex="55" fxFlex.md="30">
         <a href="#">Blizzard Software</a>
         <mat-icon class="nav-icon">settings</mat-icon>
       </div>
-      <div class="nav-options" fxFlex="45" fxLayout="row" fxLayoutAlign="space-between">
+      <div class="nav-options" fxFlex="grow" fxLayout="row" fxLayoutAlign="space-between center">
         <form novalidate fxFlex="60" style="margin-left:20px" class="text-white">
           <input type="text" placeholder="search" class="nav-search">
         </form>
@@ -18,7 +18,7 @@
           <div class="font-size-sm text-white"  >
             {{today|date}}
           </div>
-          <mat-icon class="nav-icon" style="margin-top:6px">wb_sunny</mat-icon>
+          <mat-icon class="nav-icon" style="margin-top:7px">wb_sunny</mat-icon>
           <div class="font-size-sm text-white" >
             {{userName}}
           </div>
@@ -33,7 +33,7 @@
   
   </mat-toolbar>
   
-  <mat-sidenav-container [style.marginTop.px]="0" class="side-navigation-container">
+  <mat-sidenav-container [style.marginTop.px]="50" class="side-navigation-container" fxLayout="column" >
     <mat-sidenav #sidenav mode="side" opened="true" class="side-navigation" [fixedInViewport]="'true'" fixedTopGap="50" fixedBottomGap='0'>
       <mat-nav-list class="side-navigation-list">
         <!-- <a mat-list-item routerLink="." *ngFor="let nav of items">{{nav}}</a> -->
@@ -116,6 +116,7 @@
           </li>
         </ul>
       </div>
+
       <div class="content-container">
         <p class="heading">Grid with Single Line</p>
         <div class="main-grid-container">
@@ -197,7 +198,7 @@
             </button>
           </mat-menu> -->
           </div>
-          <div class="filter-chips-container" fxLayout="row" fxLayoutAlign="space-between">
+          <div class="filter-chips-container" fxLayout="row" fxLayoutAlign="space-between center">
             <mat-chip-list>
               <mat-chip removable="true">Marketing
                 <mat-icon matChipRemove>cancel</mat-icon>
@@ -209,7 +210,7 @@
                 <mat-icon matChipRemove>cancel</mat-icon>
               </mat-chip>
             </mat-chip-list>
-            <small style="margin-top: 5px;">Total 345</small>
+            <small>Total 345</small>
           </div>
   
           <div class="review-grid-actions" fxLayout="row" fxLayoutAlign="space-between">
@@ -232,8 +233,6 @@
           </div>
   
           <!-- grid -->
-          <div flexLayout="row">
-          <div style="overflow:hidden" fxFlex="grow">
             <ag-grid-angular style="width: 100%" class="ag-theme-material" [domLayout]="'autoHeight'" [gridOptions]="gridOptions" [columnDefs]="columnDefs"
               [rowData]="rowData" paginationPageSize="2" [icons]="icons" enableColResize enableSorting enableFilter suppressRowClickSelection
               [rowSelection]="multiple" [pagination]="true" suppressPaginationPanel="true" (gridReady)="onReady($event)">
@@ -249,21 +248,29 @@
                   <mat-option [value]=3>3</mat-option>
                 </mat-select>
               </mat-form-field>
-              <span ref="eSummaryPanel" class="ag-paging-row-summary-panel">
+              <!-- <span ref="eSummaryPanel" class="ag-paging-row-summary-panel">
                 <span ref="lbFirstRowOnPage">1</span> -
                 <span ref="lbLastRowOnPage">2</span> of
                 <span ref="lbRecordCount">3</span>
               </span>
               <span class="ag-paging-page-summary-panel">
-                <!-- <button type="button" class="ag-paging-button" ref="btFirst" disabled="">First</button> -->
                 <button type="button" class="ag-paging-button" ref="btPrevious" disabled="">Previous</button>
+                <button type="button" class="ag-paging-button" ref="btNext">Next</button>
+              </span> -->
+
+              <span class="ag-paging-row-summary-panel">
+                <span>1</span> -
+                <span  >2</span> of
+                <span >3</span>
+              </span>
+              <span class="ag-paging-page-summary-panel">
+                <!-- <button type="button" class="ag-paging-button" ref="btFirst" disabled="">First</button> -->
+                <button type="button" class="ag-paging-button"  ref="btPrevious" disabled="">Previous</button>
                 <!-- Page <span ref="lbCurrent">1</span> of <span ref="lbTotal">2</span> -->
                 <button type="button" class="ag-paging-button" ref="btNext">Next</button>
                 <!-- <button type="button" class="ag-paging-button" ref="btLast">Last</button> -->
               </span>
             </div>
-          </div>
-        </div>
   
         </div>
       </div>
