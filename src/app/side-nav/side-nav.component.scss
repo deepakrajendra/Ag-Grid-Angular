@@ -1,0 +1,59 @@
+
+    .side-navigation {
+        // display: flex;
+        width: 100px;
+        background-color:#2F4055;
+        // margin-left:-8px;
+        .side-navigation-list{
+            //   width:100%;
+            padding-top:0px;
+        
+            
+          .side-navigation-item{
+            // padding-left: 15px;
+            color:#A6B1BC;
+            // margin-top:37px;
+            padding: 20px 10px 20px 10px;
+            // text-align: center;  
+        
+            .side-navigation-icon{
+                font-size:30px;
+                margin-left:25px;
+                color:#A6B1BC;
+            }
+            // a.active{
+            //         background-color:#424955;
+            // }
+        }
+        
+        :hover{
+            background-color:#424955;
+        }
+        .active{
+            background-color:#424955;
+        }
+            }
+       
+      }
+    .main-content{
+        margin-left:92px;
+    }
+// }
+  
+  
+    
+  
+   
+    
+    .btn-primary{
+      background-color:#3D9EED; 
+      color:white;
+      margin-right:10px;
+    }
+  
+    .btn-cancel{
+      background-color:#A4AAB2; 
+      color:white;
+    }
+  
+  

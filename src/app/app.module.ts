@@ -8,6 +8,9 @@ import { ReviewService } from './review.service';
 import { DateRendererComponent } from './date-renderer/date-renderer.component';
 import { ActionsRendererComponent } from './actions-renderer/actions-renderer.component';
 import { HeaderComponent } from './header/header.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { PerformanceModule } from './performance/performance.module';
 
 
 @NgModule({
@@ -15,12 +18,15 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     DateRendererComponent,
     ActionsRendererComponent,
-    HeaderComponent
-  ],
+    HeaderComponent,
+    SideNavComponent
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule,
+    PerformanceModule
   ],
   providers: [ReviewService],
   bootstrap: [AppComponent]

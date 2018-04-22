@@ -1,0 +1,48 @@
+<mat-sidenav-container [style.marginTop.px]="50" class="side-navigation-container" fxLayout="column" >
+  <mat-sidenav #sidenav mode="side" opened="true" class="side-navigation" [fixedInViewport]="'true'" fixedTopGap="50" fixedBottomGap='0'>
+    <mat-nav-list class="side-navigation-list">
+      <!-- <a mat-list-item routerLink="." *ngFor="let nav of items">{{nav}}</a> -->
+      <!-- <a mat-list-item><mat-icon class="side-navigation-icon">dashboard</mat-icon></a>
+                <p>Dashboard</p> -->
+      <div mat-list-item class="side-navigation-item" fxLayout="column">
+        <a>
+          <mat-icon class="side-navigation-icon">dashboard</mat-icon>
+        </a>
+        <small class="text-align-center">Dashboard</small>
+      </div>
+
+      <div mat-list-item class="side-navigation-item" fxLayout="column">
+        <a>
+          <mat-icon class="side-navigation-icon">access_time</mat-icon>
+        </a>
+        <small class="text-align-center">Time Attendance</small>
+      </div>
+      <div mat-list-item class="side-navigation-item" fxLayout="column">
+        <a routerLink="/performance" routerLinkActive="active">
+          <mat-icon class="side-navigation-icon">assignment</mat-icon>
+        </a>
+        <small class="text-align-center">Performance</small>
+      </div>
+      <div mat-list-item class="side-navigation-item" fxLayout="column">
+        <a>
+          <mat-icon class="side-navigation-icon">folder_shared</mat-icon>
+        </a>
+        <small class="text-align-center">Timesheets</small>
+      </div>
+      <div mat-list-item class="side-navigation-item" fxLayout="column">
+        <a>
+          <mat-icon class="side-navigation-icon">account_balance_wallet</mat-icon>
+        </a>
+        <small class="text-align-center">Payroll</small>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- <mat-sidenav-content class="main-content" style="margin-left:92px"> -->
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+   
+
+    
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

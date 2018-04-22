@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
   today: any = new Date();
-  userName: string = "User name"
+  userName: string = "User name";
   ngOnInit() {
   }
 
