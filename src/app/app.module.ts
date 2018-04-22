@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ReviewService } from './review.service';
 import { DateRendererComponent } from './date-renderer/date-renderer.component';
 import { ActionsRendererComponent } from './actions-renderer/actions-renderer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DateRendererComponent,
-    ActionsRendererComponent
+    ActionsRendererComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

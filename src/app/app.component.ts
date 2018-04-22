@@ -15,8 +15,7 @@ import { ActionsRendererComponent } from './actions-renderer/actions-renderer.co
 export class AppComponent {
   title = 'app';
   items: Array<string> = ["item 1", "item 2", "item 3"];
-  today: any = new Date();
-  userName: string = "User name"
+ 
 //drop down
 selected ="1";
   

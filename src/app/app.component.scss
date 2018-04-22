@@ -1,6 +1,6 @@
 .main-container{
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -8,68 +8,7 @@
     right: 0;
   }
   
-  .header{
-      position:fixed;
-      z-index:2;
-      height:50px;
   
-      .logo-container {
-          height: 50px;
-          width: 106px;
-          background-color: rgba(0,0,0,0.2);
-      }
-  
-      .logo{
-          margin-top: 11px;
-          margin-left: 21px;
-          height:23px;
-      }
-      
-      .nav-container{
-          width:100%;
-          margin-left:17px;
-          color:white;
-          .org-name{
-              padding-bottom:5px;
-              a{
-                  text-decoration: none;
-                  color:white;
-                  font-size: 15px;
-                  margin-top: 5px;
-                  display: inline-block;
-                  margin-right:5px;
-              }
-          }
-          .nav-icon{
-            //   color:white;
-              margin-top:12px;
-               font-size:16px;
-          }
-  
-          .profile-picture{
-              height:30px;
-              width:30px;
-              border-radius:50%;
-              margin-top:10px;
-          }
-
-          .nav-search{
-            height:29px;
-            width:214px;
-            border-radius:4px;
-            background-color:rgba(0,0,0,0.2);
-            border : 1px solid rgba(243,243,243,0.5);
-            color:rgba(243,243,243,0.5);
-            padding: 4px 0 4px 10px;
-            font-size: 13px;
-            transition : border .5s ease-in-out, background .3s ease-in-out;
-        }
-        ::placeholder {
-            color: lightgrey;
-        }
-      }
-  
-  }
   
 //   .side-navigation-container {
     // display: flex;
@@ -258,38 +197,6 @@
      
   //common css
   
-  .clear-left-padding{
-      padding-left:0;
-  }
-  
-  
-  .font-size-sm{
-  font-size:12px;
-  }
-  
-  .font-size-md{
-      font-size:16px;
-  }
-  
-  .font-size-lg{
-      font-size:20px;
-  }
-  
-  .text-white{
-      color:white;
-  }
-  
-  .text-grey{
-      color:grey;
-  }
-  
-  .text-align-center{
-      text-align: center;
-  }
-  
-  .display-block{
-      display:block;
-  }
   
   
   //material

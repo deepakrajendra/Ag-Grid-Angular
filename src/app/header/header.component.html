@@ -1,0 +1,32 @@
+<mat-toolbar class="header clear-left-padding" color="primary">
+  <div class="logo-container">
+    <a href="#">
+      <img src="../assets/images/logo.png" class="logo" alt="keka logo">
+    </a>
+  </div>
+  <div class="nav-container" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="org-name" fxFlex="55" fxFlex.md="30">
+      <a href="#">Blizzard Software</a>
+      <mat-icon class="nav-icon">settings</mat-icon>
+    </div>
+    <div class="nav-options" fxFlex="grow" fxLayout="row" fxLayoutAlign="space-between center">
+      <form novalidate fxFlex="60" style="margin-left:20px" class="text-white">
+        <input type="text" placeholder="search" class="nav-search">
+      </form>
+      <div fxFlex="40" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="20px">
+        <div class="font-size-sm text-white"  >
+          {{today|date}}
+        </div>
+        <mat-icon class="nav-icon" style="margin-top:7px">wb_sunny</mat-icon>
+        <div class="font-size-sm text-white" >
+          {{userName}}
+        </div>
+        <div class="font-size-sm text-white" style="margin-top:8px" >
+            <a>
+                <img class="profile-picture" src="../assets/images/download.jpg" />
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
