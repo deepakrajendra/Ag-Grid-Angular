@@ -18,13 +18,13 @@
           <mat-option value="1">Legal Entities</mat-option>
         </mat-select>
       </mat-form-field>
-      <div style="padding:10px 15px 10px 15px; color:#A4AAB2; border-right:1px solid #A4AAB2; cursor:pointer" fxLayout="row" [matMenuTriggerFor]="menu">
-        <mat-icon style="font-size:21px;margin-top:3px">menu</mat-icon>
-        <span style="margin-top: 7px;margin-left: 10px;">More</span>
+      <div  class="filter-option" style=" border-right:1px solid #A4AAB2;" fxLayout="row" [matMenuTriggerFor]="menu">
+        <mat-icon class="filter-icon">menu</mat-icon>
+        <span class="filter-option-text">More</span>
       </div>
-      <div style="padding:10px 15px 10px 15px; color:#A4AAB2; cursor:pointer" fxLayout="row">
-        <mat-icon style="font-size:21px; margin-top:3px">refresh</mat-icon>
-        <span style="margin-top:7px; margin-left:10px;">Reset</span>
+      <div class="filter-option" fxLayout="row">
+        <mat-icon class="filter-icon">refresh</mat-icon>
+        <span class="filter-option-text">Reset</span>
       </div>
       <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
                 <span>Menu</span> <mat-icon>menu</mat-icon>

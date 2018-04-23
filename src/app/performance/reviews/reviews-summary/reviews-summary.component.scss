@@ -33,6 +33,19 @@
             border-right-color:#A4AAB2;
             color:#A4AAB2;
         }
+        .filter-option{
+            padding:10px 15px 10px 15px; 
+            color:#A4AAB2;
+            cursor:pointer;
+            .filter-option-text{
+                margin-top: 7px;
+                margin-left: 10px;
+            }
+        }
+        .filter-icon{
+            font-size:21px;
+            margin-top:3px;
+        }
     }
     .filter-chips-container{
         margin: 5px 0 5px 0;
@@ -49,20 +62,20 @@
     }
 }
 
-.page-size-select{
-    margin-top:7px;
-    ::ng-deep .mat-input-underline {
-        display: none;
-    }
+// .page-size-select{
+//     margin-top:7px;
+//     ::ng-deep .mat-input-underline {
+//         display: none;
+//     }
     
-    ::ng-deep .mat-form-field-infix {
-        width: 30px;
-    }
+//     ::ng-deep .mat-form-field-infix {
+//         width: 30px;
+//     }
 
-    ::ng-deep .mat-select-value-text {
-        color: #A4AAB2;
-    }
-}
+//     ::ng-deep .mat-select-value-text {
+//         color: #A4AAB2;
+//     }
+// }
 
 //   .server-filter-select{
 //       border-right : 1px solid #A4AAB2;
