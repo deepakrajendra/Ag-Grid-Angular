@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~ag-grid/dist/styles/ag-grid.css";
+$primary-color: #2196F3;  
+$accent-color: #FFD740;  
 @import "~ag-grid/dist/styles/ag-theme-material.css";
 
 body{
@@ -68,6 +70,10 @@ background-color: #F4F5F8;
 
     .ag-theme-material .ag-header-cell-label .ag-header-icon span {
      height: 10px;
+    }
+
+    .ag-header-icon ag-header-cell-menu-button{
+        opacity:1 !important;
     }
     //angular material override
     mat-nav-list a {
@@ -176,14 +182,10 @@ background-color: #F4F5F8;
               :hover{
                   font-weight:700;
               }
-              a.active{
-                    font-weight:700;
-              }
             }
-            
-            
-    
-    
+            a.active{
+                font-weight:700;
+          }
         }
         li.active{
             border-bottom:#3D9EED 2px solid;
@@ -200,3 +202,62 @@ background-color: #F4F5F8;
         //       }
     }
     }
+
+
+    //grid filter styles
+    .content-container{
+        width:98%;
+        margin-left:auto;
+        margin-right:auto;
+          margin-top:30px;
+    
+        .heading {
+            color: #222222;
+            font-family: "Segoe UI";
+            font-size: 24px;
+            line-height: 32px;
+        }
+     
+        .main-grid-container{
+          border: 1px solid #E3E5E8;
+    
+        .filters-container{
+            border:1px solid #E3E5E8;
+            background-color:white;
+            .dropdown{
+                padding:15px;
+                // padding-right:20px;
+                border-color:transparent;
+                border-right-color:#A4AAB2;
+                color:#A4AAB2;
+            }
+            .filter-option{
+                padding:10px 15px 10px 15px; 
+                color:#A4AAB2;
+                cursor:pointer;
+                .filter-option-text{
+                    margin-top: 7px;
+                    margin-left: 10px;
+                }
+            }
+            .filter-icon{
+                font-size:21px;
+                margin-top:3px;
+            }
+        }
+        .filter-chips-container{
+            margin: 5px 0 5px 0;
+          padding: 10px 20px 10px 20px;
+            
+        }
+        .review-grid-actions{
+            padding: 20px 20px 0 20px;
+            background-color:white;
+        .grid-actions-icon{
+             margin-top:10px;
+             color:lightgrey;
+        }
+        }
+    }
+     
+      }

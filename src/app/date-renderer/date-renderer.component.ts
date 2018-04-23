@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DateRendererComponent implements OnInit {
 
   private params:any;
+  private isStartedOnAvailable:boolean=false;
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +16,9 @@ export class DateRendererComponent implements OnInit {
 
   agInit(params:any): void{
     this.params= params;
+    if(this.params.value[1]){
+      this.isStartedOnAvailable=true;
+    }
   }
 
 }

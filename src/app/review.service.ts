@@ -7,9 +7,9 @@ export class ReviewService {
   private reviews: Array<Review>;
   constructor() {
     this.reviews = [
-      new Review(1, "Vijay Prakash", new Date(), ["Sashi P", "Vijay P", "Vignesh", "Ravi"], "Pending Approval", "Rahul Khanna"),
-      new Review(2, "Raj Kumar", new Date(), ["Eric"], "Pending Approval", "Rahul Khanna"),
-      new Review(3, "Manohar Ch", new Date(), ["Raj Kumar"], "Pending Approval", "Rahul Khanna"),
+      new Review(1, "Vijay Prakash", "Admin",new Date(), new Date(),["Sashi P", "Vijay P", "Vignesh", "Ravi"], "Pending Approval", "Rahul Khanna"),
+      new Review(2, "Raj Kumar","Admin", new Date(), new Date(), ["Eric"], "Pending Approval", "Rahul Khanna"),
+      new Review(3, "Manohar Ch","Admin", new Date(), new Date(), ["Raj Kumar"], "Pending Approval", "Rahul Khanna"),
     ];
   }
 

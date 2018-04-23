@@ -1,8 +1,7 @@
 <div class="content-container">
-  <p class="heading">Grid with Single Line</p>
+  <p class="heading">Grid with Two Lines per row</p>
   <div class="main-grid-container">
     <div class="filters-container" fxLayout="row">
-      <!-- <div class="drop-down" fxFlex="10"> -->
       <mat-form-field class="server-filter-select">
         <mat-select [(value)]="selected">
           <mat-option value="1">Department</mat-option>
@@ -26,9 +25,6 @@
         <mat-icon class="filter-icon">refresh</mat-icon>
         <span class="filter-option-text">Reset</span>
       </div>
-      <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
-                <span>Menu</span> <mat-icon>menu</mat-icon>
-               </button> -->
       <mat-menu #menu="matMenu">
         <button mat-menu-item>
           <span>Option 1</span>
@@ -40,44 +36,7 @@
           <span>Option 3</span>
         </button>
       </mat-menu>
-      <!-- </div> -->
-      <!-- <select class="dropdown"name="sel" id="departments" value="department">
-       <option value="1">Department</option>
-     </select>
-     <select class="dropdown"name="sel" id="locations">
-      <option value="1">Location</option>
-    </select>
-    <select class="dropdown"name="sel" id="legal-entities">
-      <option value="1">Legal Entity</option>
-    </select>
-    <div style="padding:10px; color:#A4AAB2; border-right:1px solid #A4AAB2" fxLayout="row">
-      <mat-icon style="font-size:21px;margin-top:3px">menu</mat-icon>
-      <span style="margin-top: 7px;margin-left: 10px;">More</span>
-    </div>
-    <div style="padding:10px; color:#A4AAB2" fxLayout="row">
-      <mat-icon style="font-size:21px; margin-top:3px">refresh</mat-icon>
-      <span style="margin-top:7px; margin-left:10px;">Reset</span>
-    </div> -->
-      <!-- <div >
-      <mat-icon>menu</mat-icon><span>More </span>
-    </div> -->
-      <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
-     <span>Menu</span> <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>dialpad</mat-icon>
-        <span>Redial</span>
-      </button>
-      <button mat-menu-item disabled>
-        <mat-icon>voicemail</mat-icon>
-        <span>Check voicemail</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Disable alerts</span>
-      </button>
-    </mat-menu> -->
+       
     </div>
     <div class="filter-chips-container" fxLayout="row" fxLayoutAlign="space-between center">
       <mat-chip-list>
@@ -104,16 +63,17 @@
         <a href="#">
           <mat-icon class="grid-actions-icon">file_download</mat-icon>
         </a>
-        <a href="#">
+        <!-- <a href="#">
           <mat-icon class="grid-actions-icon" style="transform: rotate(90deg);">menu</mat-icon>
-        </a>
+        </a> -->
         <mat-form-field>
-          <input matInput placeholder="Search"  #search (keyup)="filterGrid(search.value)"> 
+          <input matInput placeholder="Search"> 
         </mat-form-field>
       </div>
     </div>
 
     <!-- grid -->
+    <div class="two-line-grid"> 
       <ag-grid-angular style="width: 100%" class="ag-theme-material" [domLayout]="'autoHeight'" [gridOptions]="gridOptions" [columnDefs]="columnDefs"
         [rowData]="rowData" paginationPageSize="2" [icons]="icons" enableColResize enableSorting enableFilter suppressRowClickSelection
         [rowSelection]="multiple" [pagination]="true" suppressPaginationPanel="true" (gridReady)="onReady($event)">
@@ -129,15 +89,7 @@
             <mat-option [value]=3>3</mat-option>
           </mat-select>
         </mat-form-field>
-        <!-- <span ref="eSummaryPanel" class="ag-paging-row-summary-panel">
-          <span ref="lbFirstRowOnPage">1</span> -
-          <span ref="lbLastRowOnPage">2</span> of
-          <span ref="lbRecordCount">3</span>
-        </span>
-        <span class="ag-paging-page-summary-panel">
-          <button type="button" class="ag-paging-button" ref="btPrevious" disabled="">Previous</button>
-          <button type="button" class="ag-paging-button" ref="btNext">Next</button>
-        </span> -->
+      
 
         <span class="ag-paging-row-summary-panel">
           <span>1</span> -
@@ -145,12 +97,10 @@
           <span >3</span>
         </span>
         <span class="ag-paging-page-summary-panel">
-          <!-- <button type="button" class="ag-paging-button" ref="btFirst" disabled="">First</button> -->
           <button type="button" class="ag-paging-button"  ref="btPrevious" disabled="">Previous</button>
-          <!-- Page <span ref="lbCurrent">1</span> of <span ref="lbTotal">2</span> -->
           <button type="button" class="ag-paging-button" ref="btNext">Next</button>
-          <!-- <button type="button" class="ag-paging-button" ref="btLast">Last</button> -->
         </span>
+      </div>
       </div>
 
   </div>

@@ -6,6 +6,7 @@ import { PerformanceComponent } from './performance.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ReviewsSummaryComponent } from './reviews/reviews-summary/reviews-summary.component';
 import { SharedModule } from '../shared/modules/shared.module';
+import { ReviewTemplatesComponent } from './reviews/review-templates/review-templates.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,7 +16,8 @@ import { SharedModule } from '../shared/modules/shared.module';
   declarations: [
     PerformanceComponent, 
     ReviewsComponent,
-     ReviewsSummaryComponent
+     ReviewsSummaryComponent,
+     ReviewTemplatesComponent
   ]
 })
 export class PerformanceModule { }
