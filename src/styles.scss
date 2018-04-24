@@ -50,7 +50,6 @@ background-color: #F4F5F8;
 }
 .ag-icon-menu {
     display: inline-block;
-    // background: transparent url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9I…ptMCA0aDEwdjJIMXptMCA0aDEwdjJIMXoiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) center no-repeat;
     background-size: 12px 12px;
     -webkit-filter: "initial";
     filter: "initial";
@@ -156,10 +155,57 @@ background-color: #F4F5F8;
     .mt-7{
         margin-top:7px;
     }
+    .p-20{
+        padding:20px;
+    }
+    .bg-white{
+        background-color:white;
+    }
     
     //page navigation
 
-    .sub-page-main-navigation {
+    .sub-page-navigation {
+        ul{
+            list-style-type: none;
+            padding-left:0;
+            padding-top:5px;
+            border-bottom: 1px solid #E3E5E8;
+            margin:0 0 0 0;
+            background-color:white;
+            li{
+                display:inline-block;
+                padding-bottom: 15px;
+                padding: 10px 0 17px 0;
+              margin: 0 30px 0 20px;
+              position:relative;
+            a{
+                color:#888888;
+              font-size: 13px;
+              text-transform: uppercase;
+              text-decoration:none;
+              font-weight: 500;
+              font-family: "Segoe UI";
+              :hover{
+                  font-weight:700;
+              }
+            }
+            a.active{
+                font-weight:700;
+          }
+        }
+        li.active:after {
+            content: " ";
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 9px solid #efefef;
+            position: absolute;
+            top: 81%;
+            left: 30%;
+        }
+    }
+    }
+
+    .child-navigation{
         ul{
             list-style-type: none;
             padding-left:0;
@@ -201,6 +247,7 @@ background-color: #F4F5F8;
         //         left: 50%;
         //       }
     }
+
     }
 
 
@@ -251,7 +298,7 @@ background-color: #F4F5F8;
             
         }
         .review-grid-actions{
-            padding: 20px 20px 0 20px;
+            padding: 20px 20px 10px 20px;
             background-color:white;
         .grid-actions-icon{
              margin-top:10px;

@@ -1,0 +1,27 @@
+<div class="content-container">
+    <p class="heading">Grid with Single Line no pagination</p>
+    <div class="main-grid-container">
+  
+      <div class="review-grid-actions" fxLayout="row-reverse" fxLayoutAlign="space-between">
+        
+        <div fxLayout="row-reverse center" fxLayoutGap="20px" fxFlex="30">
+          <a href="#">
+            <mat-icon class="grid-actions-icon">file_download</mat-icon>
+          </a>
+          <a href="#">
+            <mat-icon class="grid-actions-icon" style="transform: rotate(90deg);">menu</mat-icon>
+          </a>
+        </div>
+      </div>
+  
+      <!-- grid -->
+        <ag-grid-angular style="width: 100%" class="ag-theme-material" [domLayout]="'autoHeight'" [gridOptions]="gridOptions" [columnDefs]="columnDefs"
+          [rowData]="rowData" paginationPageSize="2" [icons]="icons" enableColResize enableSorting enableFilter suppressRowClickSelection
+          [rowSelection]="multiple" [pagination]="true" suppressPaginationPanel="true" (gridReady)="onReady($event)"
+          [defaultColDef]="defaultColDef">
+        </ag-grid-angular>
+        <div class="grid-footer bg-white" fxLayout="row-reverse">
+          <small class="p-20 text-grey">1 - 254 of 245</small>
+        </div>
+    </div>
+  </div>

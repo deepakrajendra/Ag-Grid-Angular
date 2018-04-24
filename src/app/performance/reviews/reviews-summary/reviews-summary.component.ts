@@ -2,7 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GridApi, GridOptions, ColumnApi } from 'ag-grid';
 
-import { RefData } from '../../../shared/models/ref-data';
 import { Review } from '../../../shared/models/review.model';
 import { ReviewService } from '../../../review.service';
 import { DateRendererComponent } from '../../../date-renderer/date-renderer.component';
@@ -15,8 +14,6 @@ import { ActionsRendererComponent } from '../../../actions-renderer/actions-rend
 })
 
 export class ReviewsSummaryComponent implements OnInit {
-  title:string = 'app';
-  items: Array<string> = ["item 1", "item 2", "item 3"];
  
   ngOnInit(){}
 //drop down

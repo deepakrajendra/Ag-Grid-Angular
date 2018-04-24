@@ -7,6 +7,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
 import { ReviewsSummaryComponent } from './reviews/reviews-summary/reviews-summary.component';
 import { SharedModule } from '../shared/modules/shared.module';
 import { ReviewTemplatesComponent } from './reviews/review-templates/review-templates.component';
+import { ReviewQuestionsComponent } from './reviews/review-questions/review-questions.component';
+import { ReviewOverviewComponent } from './reviews/review-overview/review-overview.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +19,9 @@ import { ReviewTemplatesComponent } from './reviews/review-templates/review-temp
     PerformanceComponent, 
     ReviewsComponent,
      ReviewsSummaryComponent,
-     ReviewTemplatesComponent
+     ReviewTemplatesComponent,
+     ReviewQuestionsComponent,
+     ReviewOverviewComponent
   ]
 })
 export class PerformanceModule { }

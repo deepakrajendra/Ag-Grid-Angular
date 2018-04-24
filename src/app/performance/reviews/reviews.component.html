@@ -1,13 +1,16 @@
-<div class="sub-page-main-navigation">
+<div class="child-navigation">
     <ul>
-      <li class="active">
+      <li [routerLinkActive]="['active']">
         <a [routerLink]="['summary']">summary</a>
       </li>
-      <li>
+      <li [routerLinkActive]="['active']">
         <a [routerLink]="['templates']">review templates</a>
       </li>
-      <li>
-        <a href="#">review questions</a>
+      <li [routerLinkActive]="['active']">
+        <a [routerLink]="['questions']">review questions</a>
+      </li>
+      <li [routerLinkActive]="['active']">
+        <a [routerLink]="['overview']"> Review Overview</a>
       </li>
     </ul>
   </div>

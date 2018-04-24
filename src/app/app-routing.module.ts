@@ -7,6 +7,8 @@ import { PerformanceComponent } from './performance/performance.component';
 import { ReviewsComponent } from './performance/reviews/reviews.component';
 import { ReviewsSummaryComponent } from './performance/reviews/reviews-summary/reviews-summary.component';
 import { ReviewTemplatesComponent } from './performance/reviews/review-templates/review-templates.component';
+import { ReviewQuestionsComponent } from './performance/reviews/review-questions/review-questions.component';
+import { ReviewOverviewComponent } from './performance/reviews/review-overview/review-overview.component';
 
 const routes: Routes = [
   // {path : '', component: PerformanceComponent},
@@ -20,8 +22,9 @@ const routes: Routes = [
         component: ReviewsComponent,
         children: [
           { path: 'summary', component: ReviewsSummaryComponent },
-          { path: 'templates', component: ReviewTemplatesComponent }
-        ]
+          { path: 'templates', component: ReviewTemplatesComponent },
+          { path: 'questions', component: ReviewQuestionsComponent },
+          { path: 'overview', component: ReviewOverviewComponent }       ]
       },
       {
         path: '',

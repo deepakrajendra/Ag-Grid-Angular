@@ -8,12 +8,12 @@ import { DateRendererComponent } from '../../../date-renderer/date-renderer.comp
 import { ActionsRendererComponent } from '../../../actions-renderer/actions-renderer.component';
 
 @Component({
-  selector: 'app-review-templates',
-  templateUrl: './review-templates.component.html',
-  styleUrls: ['./review-templates.component.scss']
+  selector: 'app-review-questions',
+  templateUrl: './review-questions.component.html',
+  styleUrls: ['./review-questions.component.scss']
 })
-export class ReviewTemplatesComponent implements OnInit {
- 
+export class ReviewQuestionsComponent implements OnInit {
+
   ngOnInit(){}
 //drop down
 selected: string ="1";
