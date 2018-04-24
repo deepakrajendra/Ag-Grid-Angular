@@ -1,0 +1,26 @@
+<!-- <input type="range" class="floating-filter"
+  min="0" [max]="maxValue"
+  data-show-value="true" data-popup-enabled="true"
+  [(ngModel)]="currentValue"
+  (ngModelChange)="valueChanged()"/>  -->
+  <!-- <div class="ag-floating-filter-button" aria-hidden="true"> -->
+<!-- </div>
+
+<!-- <div style="background-color:white">
+  <span class="ag-icon ag-icon-filter"></span>
+  <mat-form-field style="margin-bottom:10px">
+    <input matInput>
+  </mat-form-field>
+</div> -->
+<!-- 
+<div>
+  <span matPrefix class="ag-icon ag-icon-filter"  style="margin-top: 17px;"></span>
+    <input matInput>
+</div> -->
+<div fxLayout="row" style="margin-top:5px">
+  <span class="ag-icon ag-icon-filter" style="margin-top: 17px;"></span>
+<div class="ag-floating-filter-body" aria-hidden="true">
+  <div>
+    <input ref="eColumnFloatingFilter" class="ag-floating-filter-input" [(ngModel)]="currentValue"
+  (ngModelChange)="valueChanged()"></div></div>
+</div>

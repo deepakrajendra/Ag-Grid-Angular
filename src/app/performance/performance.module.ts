@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/modules/shared.module';
 import { ReviewTemplatesComponent } from './reviews/review-templates/review-templates.component';
 import { ReviewQuestionsComponent } from './reviews/review-questions/review-questions.component';
 import { ReviewOverviewComponent } from './reviews/review-overview/review-overview.component';
+import { ReviewSettingsComponent } from './reviews/review-settings/review-settings.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -21,7 +22,8 @@ import { ReviewOverviewComponent } from './reviews/review-overview/review-overvi
      ReviewsSummaryComponent,
      ReviewTemplatesComponent,
      ReviewQuestionsComponent,
-     ReviewOverviewComponent
+     ReviewOverviewComponent,
+     ReviewSettingsComponent
   ]
 })
 export class PerformanceModule { }

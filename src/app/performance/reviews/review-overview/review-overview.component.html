@@ -16,9 +16,9 @@
   
       <!-- grid -->
         <ag-grid-angular style="width: 100%" class="ag-theme-material" [domLayout]="'autoHeight'" [gridOptions]="gridOptions" [columnDefs]="columnDefs"
-          [rowData]="rowData" paginationPageSize="2" [icons]="icons" enableColResize enableSorting enableFilter suppressRowClickSelection
-          [rowSelection]="multiple" [pagination]="true" suppressPaginationPanel="true" (gridReady)="onReady($event)"
-          [defaultColDef]="defaultColDef">
+          [rowData]="rowData" [icons]="icons" enableColResize enableSorting enableFilter suppressRowClickSelection
+          [rowSelection]="multiple"  (gridReady)="onReady($event)"
+          [defaultColDef]="defaultColDef" [headerHeight]="40">
         </ag-grid-angular>
         <div class="grid-footer bg-white" fxLayout="row-reverse">
           <small class="p-20 text-grey">1 - 254 of 245</small>

@@ -1,34 +1,60 @@
 
 import { Component, OnInit } from '@angular/core';
 import { GridApi, GridOptions, ColumnApi } from 'ag-grid';
+import { FormControl } from '@angular/forms';
 
 import { Review } from '../../../shared/models/review.model';
 import { ReviewService } from '../../../review.service';
 import { DateRendererComponent } from '../../../date-renderer/date-renderer.component';
 import { ActionsRendererComponent } from '../../../actions-renderer/actions-renderer.component';
+import { GridFloatingFilterComponent } from '../../../grid-floating-filter/grid-floating-filter.component';
 
 @Component({
-  selector: 'app-reviews-summary',
-  templateUrl: './reviews-summary.component.html',
-  styleUrls: ['./reviews-summary.component.scss']
+  selector: 'app-review-settings',
+  templateUrl: './review-settings.component.html',
+  styleUrls: ['./review-settings.component.scss']
 })
 
-export class ReviewsSummaryComponent implements OnInit {
- 
+export class ReviewSettingsComponent implements OnInit {
+
   ngOnInit(){}
+// multi select drop down
+pokemonControl = new FormControl();
+columnSettingsGroups = [
+  {
+    name: 'Column Options',
+    choices: [
+      { value: '0', viewValue: 'Show Column Filters' }
+    ]
+  },
+  {
+    name: 'Select Columns To Show',
+    choices: [
+      { value: '1', viewValue: 'Reviewee' },
+      { value: '2', viewValue: 'Selection Due On' },
+      { value: '3', viewValue: 'Reviewers Nominated' },
+      { value: '4', viewValue: 'Status' },
+      { value: '5', viewValue: 'Reporting Manager'},
+      { value: '6', viewValue: 'Waiting On'}
+    ]
+  }
+];
 //drop down
 selected: string ="1";
   
   //grid
   private reviews: Array<Review>;
   private gridOptions: GridOptions;
+  //  private icons: any;
   public rowData: any[];
   public columnDefs: any[];
   public defaultColDef:any;
+  //  public rowCount: string;
+  private frameworkComponents;
 
   private api: GridApi;
   private columnApi: ColumnApi;
-  private pageSize = 3;
+  private pageSize = 2;
 
   constructor(private reviewService: ReviewService) {
 
@@ -36,7 +62,7 @@ selected: string ="1";
     this.gridOptions = <GridOptions>{};
     this.rowData = this.createRowData();
     this.columnDefs = this.createColumnDefs();
-
+    this.frameworkComponents = { gridFloatingFilterComponent: GridFloatingFilterComponent };
   }
 
   // k
@@ -45,7 +71,9 @@ selected: string ="1";
     this.api = params.api;
     this.columnApi = params.columnApi;
     this.gridOptions.api.sizeColumnsToFit();
-    this.gridOptions.headerHeight=40;
+    // this.gridOptions.headerHeight=40;
+    // this.gridOptions.floatingFiltersHeight=70;
+    this.gridOptions.animateRows=true;
     
     // this.gridOptions.columnApi.setColumnsVisible(["REVIEWEE"],true);
     // params.columnApi.setColumnsVisible(["reviewee"],true);
@@ -185,32 +213,57 @@ selected: string ="1";
         field: 'reviewee',
         headerCheckboxSelection: true,
         checkboxSelection:true,
-          filter:"agTextColumnFilter",
-          suppressFilter: true
+        filter:"agTextColumnFilter",
+        floatingFilterComponent: "gridFloatingFilterComponent",
+        floatingFilterComponentParams: {
+          suppressFilterButton: true
+        },
+        suppressMenu:true
       },
       {
         headerName: 'SELECTION DUE ON',
         field: 'selectionDueOn',
         cellRendererFramework: DateRendererComponent,
-        suppressFilter: true,
-        valueGetter: this.getDateDetails
+        // suppressFilter: true,
+        valueGetter: this.getDateDetails,
+        filter:"agTextColumnFilter",
+        floatingFilterComponent: "gridFloatingFilterComponent",
+        floatingFilterComponentParams: {
+          suppressFilterButton: true
+        },
+        suppressMenu:true
       },
       {
         headerName: 'REVIEWERS NOMINATED',
         field: 'reviewersNominated',
         valueFormatter: this.concatReviewers,
-        filter: "agTextColumnFilter"
+        filter: "agTextColumnFilter",
+        floatingFilterComponent: "gridFloatingFilterComponent",
+        floatingFilterComponentParams: {
+          suppressFilterButton: true
+        },
+        suppressMenu: true
       },
       {
         headerName: 'STATUS',
         field: 'status',
-        suppressFilter: true
-        
+        floatingFilterComponent: "gridFloatingFilterComponent",
+        floatingFilterComponentParams: {
+          suppressFilterButton: true
+        },
+      filter: "agTextColumnFilter",
+        suppressMenu: true
       },
       {
         headerName: 'WAITING ON',
         field: 'waitingOn',
-        suppressFilter: true
+        filter:"agTextColumnFilter",
+        floatingFilterComponent: "gridFloatingFilterComponent",
+        floatingFilterComponentParams: {
+          suppressFilterButton: true
+        }
+        // suppressFilter: true
+        , suppressMenu: true
       },
       {
         headerName:'ACTIONS',

@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { PerformanceModule } from './performance/performance.module';
+import { GridFloatingFilterComponent } from './grid-floating-filter/grid-floating-filter.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PerformanceModule } from './performance/performance.module';
     DateRendererComponent,
     ActionsRendererComponent,
     HeaderComponent,
-    SideNavComponent
+    SideNavComponent,
+    GridFloatingFilterComponent
     ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { PerformanceModule } from './performance/performance.module';
     PerformanceModule
   ],
   providers: [ReviewService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[GridFloatingFilterComponent]
 })
 export class AppModule { }

@@ -9,6 +9,7 @@ import { ReviewsSummaryComponent } from './performance/reviews/reviews-summary/r
 import { ReviewTemplatesComponent } from './performance/reviews/review-templates/review-templates.component';
 import { ReviewQuestionsComponent } from './performance/reviews/review-questions/review-questions.component';
 import { ReviewOverviewComponent } from './performance/reviews/review-overview/review-overview.component';
+import { ReviewSettingsComponent } from './performance/reviews/review-settings/review-settings.component';
 
 const routes: Routes = [
   // {path : '', component: PerformanceComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
           { path: 'summary', component: ReviewsSummaryComponent },
           { path: 'templates', component: ReviewTemplatesComponent },
           { path: 'questions', component: ReviewQuestionsComponent },
-          { path: 'overview', component: ReviewOverviewComponent }       ]
+          { path: 'overview', component: ReviewOverviewComponent },
+          { path: 'settings', component: ReviewSettingsComponent}       ]
       },
       {
         path: '',
