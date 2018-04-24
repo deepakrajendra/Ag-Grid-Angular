@@ -74,6 +74,9 @@ background-color: #F4F5F8;
     .ag-header-icon ag-header-cell-menu-button{
         opacity:1 !important;
     }
+    .ag-theme-material .ag-icon-checkbox-checked:empty {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG/SURBVGhD7do9T8JQFMZxvoH6uRxcePVjiEYTSICKLL7j6uAmk11MVNoq6qybiiYOmBjBRRjQRAmVR0uKcAtI74VDck/yXygN5xfW45FDeXyL2kQgri2EUrk05XyJ7Dx2tdb+O9NLh1OhlbN8dL9QV9SiSblIplCfTeXumBj8E9HMU331qGyOQ8B4E6dz1vr2BJeNraRaYr5EMezqV4xda317JGRESQi1JIRaEkIt8pCDq6q5ccJ+1hppiHH7bmIeX796YshC9JtfRHN6YUhC2hGYYqVm7ugV5vcROcggCEQKMigCkYG4QSASELcINHIIDwTiBlk/Lpvb2v9+nIUoDYBAXCBrDUT+5dN8fquZ6T4xPBHINaSJaE4/GN4I5BqiXletVezphhGBQK4h6OL+w1rJHhZGFAJxgaBeGJEIxA2CnDCXD52f80QgrhDEwrQPbwTiDkHdMCIQSAgEsTCiEEgYBLViRCKQUAg6b2BEI5BwCNrMikWgoUCGkYRQS0KoJSHUkhBqOUL8cT2MqwfWSxT7ORiIaZ0HAzMxdRJnEZFxOOFo7BhMOpxwYPDAq+jhgGLsUQ6nG44IOSTG4/kGYMLxh/Yc9QoAAAAASUVORK5CYII=');
+    }
     //angular material override
     mat-nav-list a {
         cursor: pointer;
