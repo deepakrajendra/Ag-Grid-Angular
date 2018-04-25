@@ -10,6 +10,7 @@ import { ReviewTemplatesComponent } from './reviews/review-templates/review-temp
 import { ReviewQuestionsComponent } from './reviews/review-questions/review-questions.component';
 import { ReviewOverviewComponent } from './reviews/review-overview/review-overview.component';
 import { ReviewSettingsComponent } from './reviews/review-settings/review-settings.component';
+import { GoalSettingDialogComponent } from './reviews/goal-setting-dialog/goal-setting-dialog.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -23,7 +24,8 @@ import { ReviewSettingsComponent } from './reviews/review-settings/review-settin
      ReviewTemplatesComponent,
      ReviewQuestionsComponent,
      ReviewOverviewComponent,
-     ReviewSettingsComponent
+     ReviewSettingsComponent,
+     GoalSettingDialogComponent
   ]
 })
 export class PerformanceModule { }

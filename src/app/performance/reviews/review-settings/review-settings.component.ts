@@ -74,7 +74,7 @@ selected: string ="1";
     // this.gridOptions.headerHeight=40;
     // this.gridOptions.floatingFiltersHeight=70;
     this.gridOptions.animateRows=true;
-    this.gridOptions.columnApi.setColumnVisible("reviewee",false);
+    // this.gridOptions.columnApi.setColumnVisible("reviewee",false);
     // this.gridOptions.columnApi.setColumnsVisible(["REVIEWEE"],true);
     // params.columnApi.setColumnsVisible(["reviewee"],true);
     

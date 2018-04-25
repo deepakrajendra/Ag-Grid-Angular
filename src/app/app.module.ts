@@ -12,6 +12,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { PerformanceModule } from './performance/performance.module';
 import { GridFloatingFilterComponent } from './grid-floating-filter/grid-floating-filter.component';
+import { GoalSettingDialogComponent } from './performance/reviews/goal-setting-dialog/goal-setting-dialog.component';
 
 
 @NgModule({
@@ -32,6 +33,6 @@ import { GridFloatingFilterComponent } from './grid-floating-filter/grid-floatin
   ],
   providers: [ReviewService],
   bootstrap: [AppComponent],
-  entryComponents:[GridFloatingFilterComponent]
+  entryComponents:[GridFloatingFilterComponent,GoalSettingDialogComponent]
 })
 export class AppModule { }

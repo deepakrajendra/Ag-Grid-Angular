@@ -4,17 +4,88 @@
  
 
 @include mat-core();
- 
+
+// custom palette start
+$mat-sapphire-blue: (
+  20: #F2F9FF,
+  50: #E2F2FF,
+  100: #ffcdd2,
+//   200: #ef9a9a,
+//   300: #e57373,
+//   400: #ef5350,
+  500: #3D9EED,
+  600: #2A85D0,
+  700: #2072B5,
+//   800: #c62828,
+//   900: #b71c1c,
+//   A100: #ff8a80,
+//   A200: #ff5252,
+//   A400: #ff1744,
+//   A700: #d50000,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$mat-slate: (
+  10: #f8f9fb,
+  20: #f4f5f8,
+  30: #EAEEF1,
+  50: #E3E5E8,
+  100: #d4d7dc,
+  200: #BBBFC6,
+  300: #BBBFC6,
+  400: #A4AAB2,
+  500: #898F99,
+  600: #6C7480,
+  700: #616670,
+  800: #505661,
+//   900: #b71c1c,
+//   A100: #ff8a80,
+//   A200: #ff5252,
+//   A400: #ff1744,
+//   A700: #d50000,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: $white-87-opacity,
+    900: $white-87-opacity,
+    A100: $black-87-opacity,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+//custom palette end
+
+
+
 
 $keka-app-primary: 
-mat-palette($mat-blue);
+mat-palette($mat-sapphire-blue);
 
 $keka-app-accent: 
-mat-palette($mat-grey);
-// mat-palette($mat-grey,
-// A200, 
-// A100, A400);
- 
+mat-palette($mat-slate);
 
 $keka-app-warn: 
 mat-palette($mat-red);
@@ -31,3 +102,11 @@ $keka-app-warn);
 @include angular-material-theme($keka-app-theme);
 
 
+//custom class using angular material mixins
+.icon-accent{
+    color:mat-color($mat-slate,400)
+}
+
+.app-background{
+    background-color: mat-color($mat-slate,20);
+}

@@ -1,0 +1,56 @@
+<div class="dialog-header" fxLayout="row" fxLayoutAlign="space-between" style="background-color:grey; padding:20px">
+  <div><span>Goal Process for Lazzlo Communications</span></div>
+  <div> will contain stepper</div>
+  <mat-icon>close</mat-icon>
+</div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" style="border:1px solid lightgrey; padding: 0px 10px 0 10px;">
+        <h3>Goal Settings</h3>
+        <button mat-raised-button color="primary">Save & Continue</button>
+      </div>
+<div mat-dialog-content style="margin:5px">
+    <form>
+        <div fxLayout="column">
+            <h3>Department Goals</h3>
+            <div fxLayout="column">
+                <p>Who can set department goals for each of the departments in ‘Lazzlo Communications’ ?</p>
+                <mat-checkbox color="primary"> Department Heads</mat-checkbox>
+          </div> 
+          <div >
+              <p>What are the minimum number of goals required at Organization level ?</p>
+              <mat-form-field >
+          <input matInput [value]="3">
+              </mat-form-field>
+        </div>   
+        </div>  
+
+        <h4>Standard inputs</h4>
+        <div>
+          <mat-form-field>
+          <input matInput placeholder="Submitted resignation on">
+          <mat-hint>hint for the input</mat-hint>
+        </mat-form-field>
+        <h3>without placeholder</h3>
+        <mat-form-field>
+            <input matInput>
+            <mat-hint>hint for the input</mat-hint>
+          </mat-form-field>
+        </div>
+        
+        <div>
+            <mat-form-field>
+                <mat-select placeholder="Choose">
+                  <mat-option [value]="one">one</mat-option>
+                </mat-select>
+              </mat-form-field>
+        <mat-form-field fxLayout="column" fxFlex="30">
+            <textarea matInput placeholder="Autosize textarea" matTextareaAutosize matAutosizeMinRows="2"
+                      matAutosizeMaxRows="5"></textarea>
+          </mat-form-field>
+        </div>
+        <h3>Inline input</h3>
+       <p>The employee resigned on  <mat-form-field style="width: 25px; text-align:center">
+          <input matInput>
+        </mat-form-field> of this month</p>
+
+    </form>
+</div>

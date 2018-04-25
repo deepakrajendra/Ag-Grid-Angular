@@ -19,11 +19,11 @@
         </mat-select>
       </mat-form-field>
       <div  class="filter-option" style=" border-right:1px solid #A4AAB2;" fxLayout="row" [matMenuTriggerFor]="menu">
-        <mat-icon class="filter-icon">menu</mat-icon>
+        <mat-icon class="filter-icon icon-accent">menu</mat-icon>
         <span class="filter-option-text">More</span>
       </div>
       <div class="filter-option" fxLayout="row">
-        <mat-icon class="filter-icon">refresh</mat-icon>
+        <mat-icon class="filter-icon icon-accent">refresh</mat-icon>
         <span class="filter-option-text">Reset</span>
       </div>
       <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -40,44 +40,7 @@
           <span>Option 3</span>
         </button>
       </mat-menu>
-      <!-- </div> -->
-      <!-- <select class="dropdown"name="sel" id="departments" value="department">
-       <option value="1">Department</option>
-     </select>
-     <select class="dropdown"name="sel" id="locations">
-      <option value="1">Location</option>
-    </select>
-    <select class="dropdown"name="sel" id="legal-entities">
-      <option value="1">Legal Entity</option>
-    </select>
-    <div style="padding:10px; color:#A4AAB2; border-right:1px solid #A4AAB2" fxLayout="row">
-      <mat-icon style="font-size:21px;margin-top:3px">menu</mat-icon>
-      <span style="margin-top: 7px;margin-left: 10px;">More</span>
-    </div>
-    <div style="padding:10px; color:#A4AAB2" fxLayout="row">
-      <mat-icon style="font-size:21px; margin-top:3px">refresh</mat-icon>
-      <span style="margin-top:7px; margin-left:10px;">Reset</span>
-    </div> -->
-      <!-- <div >
-      <mat-icon>menu</mat-icon><span>More </span>
-    </div> -->
-      <!-- <button mat-icon-button [matMenuTriggerFor]="menu">
-     <span>Menu</span> <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>dialpad</mat-icon>
-        <span>Redial</span>
-      </button>
-      <button mat-menu-item disabled>
-        <mat-icon>voicemail</mat-icon>
-        <span>Check voicemail</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Disable alerts</span>
-      </button>
-    </mat-menu> -->
+       
     </div>
     <div class="filter-chips-container" fxLayout="row" fxLayoutAlign="space-between center">
       <mat-chip-list>
@@ -96,16 +59,16 @@
 
     <div class="review-grid-actions" fxLayout="row" fxLayoutAlign="space-between">
       <div fxFlex="70" fxLayoutGap="13px">
-        <button mat-raised-button color="primary">Approve</button>
+        <button mat-raised-button color="primary" (click)="openModal()">Approve</button>
         <button mat-raised-button color="primary">Nudge</button>
         <button mat-raised-button color="accent" style="color:white">Cancel Review</button>
       </div>
-      <div fxLayout="row-reverse" fxLayoutGap="20px" fxFlex="30">
+      <div fxLayout="row-reverse center" fxLayoutGap="20px" fxFlex="30">
         <a href="#">
-          <mat-icon class="grid-actions-icon">file_download</mat-icon>
+          <mat-icon class="grid-actions-icon icon-accent">file_download</mat-icon>
         </a>
         <a href="#">
-          <mat-icon class="grid-actions-icon" style="transform: rotate(90deg);">menu</mat-icon>
+          <mat-icon class="grid-actions-icon icon-accent"  style="transform: rotate(90deg);">menu</mat-icon>
         </a>
         <mat-form-field>
           <input matInput placeholder="Search"  #search (keyup)="filterGrid(search.value)"> 
@@ -120,6 +83,7 @@
         [defaultColDef]="defaultColDef"
         [headerHeight]="40">
       </ag-grid-angular>
+      <div class="ag-theme-material">
       <div class="ag-paging-panel ag-font-style">
           <span style="display:inline-block; margin-right:15px">
             Rows per page
@@ -154,6 +118,6 @@
             <!-- <button type="button" class="ag-paging-button" ref="btLast">Last</button> -->
           </span>
         </div>
-
+      </div>
   </div>
 </div>

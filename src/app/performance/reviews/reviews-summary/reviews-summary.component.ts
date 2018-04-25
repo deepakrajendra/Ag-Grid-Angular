@@ -1,11 +1,13 @@
 
 import { Component, OnInit } from '@angular/core';
 import { GridApi, GridOptions, ColumnApi } from 'ag-grid';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from  '@angular/material';
 
 import { Review } from '../../../shared/models/review.model';
 import { ReviewService } from '../../../review.service';
 import { DateRendererComponent } from '../../../date-renderer/date-renderer.component';
 import { ActionsRendererComponent } from '../../../actions-renderer/actions-renderer.component';
+import { GoalSettingDialogComponent } from '../goal-setting-dialog/goal-setting-dialog.component';
 
 @Component({
   selector: 'app-reviews-summary',
@@ -13,7 +15,7 @@ import { ActionsRendererComponent } from '../../../actions-renderer/actions-rend
   styleUrls: ['./reviews-summary.component.scss']
 })
 
-export class ReviewsSummaryComponent implements OnInit {
+  export class ReviewsSummaryComponent implements OnInit {
  
   ngOnInit(){}
 //drop down
@@ -30,7 +32,7 @@ selected: string ="1";
   private columnApi: ColumnApi;
   private pageSize = 3;
 
-  constructor(private reviewService: ReviewService) {
+  constructor(private reviewService: ReviewService, private dialog: MatDialog) {
 
     this.reviews = this.reviewService.getReviews();
     this.gridOptions = <GridOptions>{};
@@ -75,110 +77,12 @@ selected: string ="1";
 
   private createRowData() {
     const rowData = this.reviews;
-
-
-
-    // for (let i = 0; i < 200; i++) {
-    //   const countryData = RefData.countries[i % RefData.countries.length];
-    //   rowData.push({
-    //       name: RefData.firstNames[i % RefData.firstNames.length] + ' ' + RefData.lastNames[i % RefData.lastNames.length],
-    //       skills: {
-    //           android: Math.random() < 0.4,
-    //           html5: Math.random() < 0.4,
-    //           mac: Math.random() < 0.4,
-    //           windows: Math.random() < 0.4,
-    //           css: Math.random() < 0.4
-    //       },
-    //       dob: RefData.DOBs[i % RefData.DOBs.length],
-    //       address: RefData.addresses[i % RefData.addresses.length],
-    //       years: Math.round(Math.random() * 100),
-    //       proficiency: Math.round(Math.random() * 100),
-    //       country: countryData.country,
-    //       continent: countryData.continent,
-    //       language: countryData.language,
-    //       mobile: '123123',
-    //       landline: '123123'
-    //   });
-    // }
-
-
+ 
     return rowData;
   }
 
   private createColumnDefs() {
-    // const columnDefs = [
-    //     {
-    //         headerName: '#',
-    //         width: 30,
-    //         height:48,
-    //         checkboxSelection: true,
-    //         suppressSorting: true,
-    //         suppressMenu: true,
-    //         pinned: true
-    //     },
-    //     {
-    //         headerName: 'Employee',
-    //         children: [
-    //             {
-    //                 headerName: "Name",
-    //                 field: "name",
-    //                 width: 150,
-    //                 height:48,
-    //                 pinned: true
-    //             },
-    //             {
-    //                 headerName: "Country",
-    //                 field: "country",
-    //                 width: 150,
-    //                 // an example of using a non-React cell renderer
-    //                 // cellRenderer: countryCellRenderer,
-    //                 pinned: true,
-    //                 filter: 'set',
-    //                 filterParams: {
-    //                     // cellRenderer: countryCellRenderer,
-    //                     cellHeight: 20
-    //                 },
-    //                 cellEditor: 'agRichSelect',
-    //                 cellEditorParams: {
-    //                     values: ["Argentina", "Brazil", "Colombia", "France", "Germany", "Greece", "Iceland", "Ireland",
-    //                         "Italy", "Malta", "Portugal", "Norway", "Peru", "Spain", "Sweden", "United Kingdom",
-    //                         "Uruguay", "Venezuela", "Belgium", "Luxembourg"],
-    //                     // cellRenderer: countryCellRenderer,
-    //                 },
-    //                 editable: true
-    //             },
-    //             {
-    //                 headerName: "Date of Birth",
-    //                 field: "dob",
-    //                 width: 110,
-    //                 pinned: true,
-    //                 // cellRenderer: function (params) {
-    //                 //     return pad(params.value.getDate(), 2) + '/' +
-    //                 //         pad(params.value.getMonth() + 1, 2) + '/' +
-    //                 //         params.value.getFullYear();
-    //                 // },
-    //                 filter: 'date',
-    //                 columnGroupShow: 'open'
-    //             }
-    //         ]
-    //     },
-    //     {
-    //         headerName: "Proficiency",
-    //         field: "proficiency",
-    //         width: 135,
-    //         // supply an angular component
-    //         // cellRendererFramework: ProficiencyCellRenderer
-    //     },
-    //     {
-    //         headerName: 'Contact',
-    //         children: [
-    //             {headerName: "Mobile", field: "mobile", width: 150, filter: 'text'},
-    //             {headerName: "Landline", field: "landline", width: 150, filter: 'text'},
-    //             {headerName: "Address", field: "address", width: 500, filter: 'text'}
-    //         ]
-    //     }
-    // ];
-
+    
     const columnDefs = [
       {
         headerName: 'REVIEWEE',
@@ -240,4 +144,20 @@ selected: string ="1";
   filterGrid(filterText: string) {
     this.gridOptions.api.setQuickFilter(filterText);
   }
+
+ 
+  openModal(): void {
+    let dialogRef = this.dialog.open(GoalSettingDialogComponent, {
+      width: '100%',
+      panelClass:'full-screen'
+      // data: { name: this.name, animal: this.animal }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }
 }
+
+ 

@@ -80,8 +80,8 @@ selected: string ="1";
       {
         headerName: 'REVIEWEE',
         field: 'reviewee',
-        headerCheckboxSelection: true,
-        checkboxSelection:true,
+        // headerCheckboxSelection: true,
+        // checkboxSelection:true,
           filter:"agTextColumnFilter",
           suppressFilter: true
       },

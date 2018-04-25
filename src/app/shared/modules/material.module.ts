@@ -8,7 +8,9 @@ import {
     MatSelectModule,
     MatInputModule,
     MatChipsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule,
+    MatCheckboxModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
 
@@ -23,7 +25,9 @@ import { NgModule } from '@angular/core';
         MatFormFieldModule,
         MatInputModule,
         MatChipsModule,
-        MatMenuModule
+        MatMenuModule,
+        MatDialogModule,
+        MatCheckboxModule
     ],
     exports: [
         MatButtonModule,
@@ -35,7 +39,9 @@ import { NgModule } from '@angular/core';
         MatFormFieldModule,
         MatInputModule,
         MatChipsModule,
-        MatMenuModule
+        MatMenuModule,
+        MatDialogModule,
+        MatCheckboxModule
     ],
 })
 
